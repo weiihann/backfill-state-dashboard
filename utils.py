@@ -17,7 +17,7 @@ def get_min_block_from_source_tables(engine, source_tables: list[str]) -> int:
     for table in source_tables:
         try:
             with engine.begin() as conn:
-                result = conn.execute(text(f"SELECT MAX(block_number) FROM default.{table}"))
+                result = conn.execute(text(f"SELECT MAX(block_number) FROM {table}"))
                 max_block = result.scalar()
                 max_block = max_block if max_block is not None else 0
             print(f"Table {table}: max block = {max_block}")

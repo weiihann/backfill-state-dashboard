@@ -1,1 +1,3 @@
 .env
+reth_plain_accounts
+__pycache__
