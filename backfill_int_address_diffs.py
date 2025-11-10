@@ -29,6 +29,7 @@ SOURCE_TABLES = [
     "canonical_execution_storage_diffs",
     "canonical_execution_nonce_diffs",
     "canonical_execution_contracts",
+    "canonical_execution_transaction",
 ]
 
 

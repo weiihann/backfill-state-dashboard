@@ -54,7 +54,7 @@ get_tx_success AS (
     FROM default.canonical_execution_transaction FINAL
     WHERE
         block_number < {EIP_6780_BLOCK} 
-        block_number BETWEEN {start_block} AND {end_block}
+        AND block_number BETWEEN {start_block} AND {end_block}
         AND success = true
 ),
 pre_eip161_empty_accounts AS (
